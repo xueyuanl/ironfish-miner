@@ -1,20 +1,20 @@
 version: "3"
 services:
-  ironfish:
-    image: ghcr.io/iron-fish/ironfish:latest
-    network_mode: host
-    container_name: ironfish
-    volumes:
-        - ${HOME}/.ironfish:/root/.ironfish
- 
   graffiti:
     image: ghcr.io/iron-fish/ironfish:latest
     network_mode: host
     volumes:
         - ${HOME}/.ironfish:/root/.ironfish
     entrypoint: ["./bin/run", "config:set", "blockGraffiti", "${graffiti}"]
+
+  ironfish:
+    image: ghcr.io/iron-fish/ironfish:latest
+    network_mode: host
+    container_name: ironfish
+    volumes:
+        - ${HOME}/.ironfish:/root/.ironfish
     depends_on:
-        - ironfish
+        - graffiti
 
   miner:
     image: ghcr.io/iron-fish/ironfish:latest

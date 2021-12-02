@@ -23,6 +23,13 @@ docker-compose down
 
 # Others
 
+Check logs
+```
+docker-compose logs -f
+# or
+docker logs miner -f
+docker logs ironfish -f
+```
 Check status
 ```
 docker exec -it ironfish ./bin/run status -f
