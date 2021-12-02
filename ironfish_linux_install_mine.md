@@ -1,13 +1,15 @@
 # Install
 
+Tested on: ubuntu 20.04
 reference: https://github.com/iron-fish/ironfish#initial-setup
 
 ### Node.js
 
-Download Linux Binaries `wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-x64.tar.xz` from https://nodejs.org/en/download/
-
 Install node, ref: https://github.com/nodejs/help/wiki/Installation
 ```
+# download bianryes
+wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-x64.tar.xz
+
 # unzip
 VERSION=v16.13.0
 DISTRO=linux-x64
@@ -77,3 +79,11 @@ check status
 ```
 yarn start status -f
 ```
+
+### Update source code
+
+code change, build, run
+```
+yarn start
+```
+back to mine
