@@ -71,7 +71,7 @@ yarn start:once
 run in two seperate terminals:
 ```
 yarn start start -d default -p 9033
-yarn start config:set blockGraffiti "cryptothink"
+yarn start config:set blockGraffiti "<your-graffiti>"
 yarn start miners:start -t 8
 ```
 
