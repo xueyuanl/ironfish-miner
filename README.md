@@ -5,12 +5,12 @@
 
 # Use docker-compose to mine iron fish
 
-First add your own graffiti:
+Set your graffiti
 ```
-export graffiti=<your-own-graffiti>
+docker run --rm -it --network host --volume $HOME/.ironfish:/root/.ironfish ghcr.io/iron-fish/ironfish:latest config:set blockGraffiti "graffiti"
 ```
 
-Then run miner:
+run services:
 ```
 # always pull new version and run background
 docker-compose pull && docker-compose up -d
@@ -33,4 +33,5 @@ docker logs ironfish -f
 Check status
 ```
 docker exec -it ironfish ./bin/run status -f
+docker exec -it ironfish ./bin/run config:show
 ```

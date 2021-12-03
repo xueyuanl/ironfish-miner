@@ -68,10 +68,12 @@ yarn start:once
 ```
 
 ### Mine
-run in two seperate terminals:
+change your own `graffiti`, run in two seperate terminals:
 ```
+# one terminal
 yarn start start -d default -p 9033
-yarn start config:set blockGraffiti "<your-graffiti>"
+# the other
+yarn start config:set blockGraffiti "graffiti"
 yarn start miners:start -t 8
 ```
 

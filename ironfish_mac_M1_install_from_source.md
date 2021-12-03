@@ -65,7 +65,7 @@ run in two seperate terminals:
 # first
 yarn start start -d default -p 9033
 # second
-yarn start config:set blockGraffiti "<your-graffiti>"
+yarn start config:set blockGraffiti "graffiti"
 yarn start miners:start -t 8
 ```
 

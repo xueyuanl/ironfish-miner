@@ -1,11 +1,11 @@
 version: "3"
 services:
-  graffiti:
-    image: ghcr.io/iron-fish/ironfish:latest
-    network_mode: host
-    volumes:
-        - ${HOME}/.ironfish:/root/.ironfish
-    entrypoint: ["./bin/run", "config:set", "blockGraffiti", "${graffiti}"]
+#  graffiti:
+#    image: ghcr.io/iron-fish/ironfish:latest
+#    network_mode: host
+#    volumes:
+#        - ${HOME}/.ironfish:/root/.ironfish
+#    entrypoint: ["./bin/run", "config:set", "blockGraffiti", "${GRAFFITI}"]
 
   ironfish:
     image: ghcr.io/iron-fish/ironfish:latest
@@ -13,8 +13,8 @@ services:
     container_name: ironfish
     volumes:
         - ${HOME}/.ironfish:/root/.ironfish
-    depends_on:
-        - graffiti
+#    depends_on:
+#        - graffiti
 
   miner:
     image: ghcr.io/iron-fish/ironfish:latest
@@ -22,8 +22,7 @@ services:
     container_name: miner
     volumes:
         - ${HOME}/.ironfish:/root/.ironfish
-    entrypoint: ["./bin/run", "miners:start", "--threads", "-1"]
+    entrypoint: ["./bin/run", "miners:start", "--threads", "-1"] 
     depends_on:
         - ironfish
-        - graffiti
-  
+#        - graffiti
