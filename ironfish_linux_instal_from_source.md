@@ -1,7 +1,8 @@
 # Install
 
-Tested on: ubuntu 20.04
+Tested on: ubuntu 20.04, debian-10
 reference: https://github.com/iron-fish/ironfish#initial-setup
+install some utils `sudo apt update && sudo apt install -y git tar wget screen` in case you don't have installed.
 
 ### Node.js
 
@@ -45,7 +46,7 @@ source $HOME/.cargo/env
 ref: https://classic.yarnpkg.com/en/docs/install#mac-stable
 
 ```
-npm install --global yarn && yarn --version
+sudo npm install --global yarn && yarn --version
 
 ```
 
@@ -74,7 +75,7 @@ change your own `graffiti`, run in two seperate terminals:
 yarn start start -d default -p 9033
 # the other
 yarn start config:set blockGraffiti "graffiti"
-yarn start miners:start -t 8
+yarn start miners:start -t -1
 ```
 
 check status

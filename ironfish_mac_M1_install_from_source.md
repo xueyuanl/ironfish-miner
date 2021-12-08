@@ -66,7 +66,7 @@ run in two seperate terminals:
 yarn start start -d default -p 9033
 # second
 yarn start config:set blockGraffiti "graffiti"
-yarn start miners:start -t 8
+yarn start miners:start -t -1
 ```
 
 check status
